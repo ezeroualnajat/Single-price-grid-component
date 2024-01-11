@@ -21,9 +21,15 @@ main {
 	box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
 	border-radius: 0.5rem;
 	overflow: hidden;
+	max-width: 39.6875rem;
+}
+@media screen and (max-width: 768px) {
+	main {
+		max-width: 19.438rem;
+		border-radius: 5px;
+	}
 }
 main article {
-	max-width: 39.6875rem;
 	display: grid;
 	grid-template-areas:
 		'first-section first-section'
@@ -31,11 +37,25 @@ main article {
 	grid-template-rows: repeat(2, auto);
 	grid-template-columns: repeat(2, 1fr);
 }
-
+@media screen and (max-width: 768px) {
+	main article {
+		grid-template-areas:
+			'first-section'
+			'second-section'
+			'last-section';
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: 19.438rem;
+	}
+}
 /* [ START ] First section STYLE */
 main article section:first-of-type {
 	grid-area: first-section;
 	padding: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+	main article section:first-of-type {
+		padding: 1.75rem 1.5rem 2rem;
+	}
 }
 main article section:first-of-type h1 {
 	color: #2ab3b1;
@@ -45,6 +65,14 @@ main article section:first-of-type h1 {
 	margin-bottom: 1em;
 	letter-spacing: -0.3px;
 }
+@media screen and (max-width: 768px) {
+	main article section:first-of-type h1 {
+		font-size: 1.25rem;
+		line-height: 1.15;
+		letter-spacing: -0.25px;
+		margin-bottom: 1.2em;
+	}
+}
 main article section:first-of-type h2 {
 	color: #c0df33;
 	font-weight: 700;
@@ -53,11 +81,26 @@ main article section:first-of-type h2 {
 	margin-bottom: 0.61112em;
 	letter-spacing: -0.22px;
 }
+@media screen and (max-width: 768px) {
+	main article section:first-of-type h2 {
+		font-size: 0.9375rem;
+		line-height: 1.33334;
+		letter-spacing: -0.19px;
+		margin-bottom: 1.06667em;
+	}
+}
 main article section:first-of-type p {
 	color: #9aa7be;
 	font-size: 1rem;
 	line-height: 1.625;
 	letter-spacing: -0.2px;
+}
+@media screen and (max-width: 768px) {
+	main article section:first-of-type p {
+		font-size: 0.875rem;
+		line-height: 1.857143;
+		letter-spacing: -0.17px;
+	}
 }
 /* [ END ] First section STYLE  */
 
@@ -110,6 +153,12 @@ main article section:last-of-type {
 	padding: 2.5rem 2.5rem 2.438rem;
 	color: #ffffff;
 	background-color: #2ab3b1;
+}
+@media screen and (max-width: 768px) {
+	main article section:nth-of-type(2),
+	main article section:last-of-type {
+		padding: 1.5rem;
+	}
 }
 /* [ END ] Second section STYLE  */
 
