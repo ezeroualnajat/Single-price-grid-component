@@ -148,6 +148,7 @@ main article section:nth-of-type(2) button {
 	width: 100%;
 	padding: 0.9375rem 1.5rem 0.875rem;
 }
+
 main article section:nth-of-type(2),
 main article section:last-of-type {
 	padding: 2.5rem 2.5rem 2.438rem;
@@ -174,7 +175,8 @@ main article section:last-of-type h4 {
 	letter-spacing: -0.22px;
 	margin-bottom: 1em;
 }
-main article section:last-of-type p {
+main article section:last-of-type ul {
+	list-style: none;
 	opacity: 0.75;
 	line-height: 1.428572;
 	font-size: 0.875rem;
